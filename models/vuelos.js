@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     const Flight = sequelize.define('Flight', {
         id: {
             type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+        //    defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
       state: {

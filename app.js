@@ -16,11 +16,11 @@ app.use(bodyParser.json());
 // Cargar rutas
 //app.use('/api', userRoutes);
 app.use('/', users);
-app.use('/planes', aviones);
+app.use('/plane', aviones);
 app.use('/dataCard', datosTarjeta);
-app.use('/places', lugares);
+app.use('/place', lugares);
 app.use('/pilots', pilotos);
-app.use('/reservations', reservaciones);
+app.use('/reservation', reservaciones);
 app.use('/Flights', vuelos);
 
 module.exports = app;

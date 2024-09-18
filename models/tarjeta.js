@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     const Datacard = sequelize.define('Datacard', {
         id: {
             type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+           // defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
       card_number: {
