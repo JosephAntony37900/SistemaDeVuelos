@@ -4,17 +4,24 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.UUID,
             primaryKey: true,
+            
         },
       name: {
         type: DataTypes.STRING(100),
         allowNull: false
       },
       dataCard_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
       }
     }, {
       tableName: 'users',
-      timestamps: false
+      timestamps: false,
+      indexes: [
+        {
+          name: 'dataCard_id_index',  // Nombre del índice (opcional)
+          fields: ['dataCard_id']     // Campos a los que se les va a aplicar el índice
+        }
+      ]
     });
   
     return users;

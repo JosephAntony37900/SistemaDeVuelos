@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
         },
       id_flight: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false
       },
       time_reservation: {
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       id_passengers: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false
       },
       sit: {

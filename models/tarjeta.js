@@ -18,8 +18,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       id_user: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        type: DataTypes.UUID,
+        allowNull: false,
+        references: {
+          model: 'users',
+          key: 'dataCard_id'
+        },
+        onUpdate: 'CASCADE'
       }
     }, {
       tableName: 'datacard',

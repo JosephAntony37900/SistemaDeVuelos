@@ -66,11 +66,28 @@ const deleteReservation = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+// Obtener estado de una reservación
+const getState = async (req,res) => {
+    try {
+      const reservation = await Reservation.findByPk(req.params.id);
+      if (reservation) {
+        const isActive = reservation.state === true;
+
+        res.status(200).json({ state: isActive});
+      } else {
+        res.status(404).json({ error: 'Reservation not found' });
+      }
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
+
 
 module.exports = {
   createReservation,
   getAllReservations,
   getReservationById,
   updateReservation,
-  deleteReservation
+  deleteReservation,
+  getState
 };

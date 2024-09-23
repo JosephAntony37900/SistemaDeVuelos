@@ -22,7 +22,12 @@ db.Pilot = require('./pilotos')(sequelize, Sequelize);
 db.Reservetion = require('./reservaciones')(sequelize, Sequelize);
 db.Datacard = require('./tarjeta')(sequelize, Sequelize);
 db.Flight = require('./vuelos')(sequelize, Sequelize);
+db.Cancel = require('./cancel')(sequelize, Sequelize);
+db.Passengers = require('./pasajeros')(sequelize, Sequelize);
 
-
+// Importar Pay y Board desde 'relations.js'
+const { Pay, Board } = require('./relations')(sequelize, Sequelize);
+db.Pay = Pay;
+db.Board = Board;
 
 module.exports = db;

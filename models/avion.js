@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(50),
       allowNull: false
     },
     capacity: {
@@ -18,9 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   }, {
-    tableName: 'planes', // Asegura que use la tabla 'planes'
+    tableName: 'planes', 
     timestamps: false
   });
 
   return Plane;
 };
+
+
