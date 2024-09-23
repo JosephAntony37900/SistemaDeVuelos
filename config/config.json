@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "chocolate200201614",
+      "password": "#",
       "database": "sistemadevuelos",
       "host": "127.0.0.1",
       "dialect": "mysql"
